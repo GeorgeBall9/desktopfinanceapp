@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <echo file="C:\Users\georg\desktopfinanceapp\target/runme.bat">start
+                                    jlink-image\bin\javaw -jar
+                                    modules\desktopfinanceapp-1.0-SNAPSHOT.jar</echo>
+  </target>
+</project>

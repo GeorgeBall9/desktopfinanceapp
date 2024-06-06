@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+    fx:controller="com.georgeBall.controller.DashboardController" spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+    <Label text="Dashboard" style="-fx-font-size: 24px;" />
+    <Label text="Total Income:" />
+    <Label fx:id="totalIncomeLabel" text="£0.00" />
+    <Label text="Total Expenses:" />
+    <Label fx:id="totalExpenseLabel" text="£0.00" />
+    <Label text="Balance:" />
+    <Label fx:id="balanceLabel" text="£0.00" />
+    <Label text="Recent Transactions:" />
+    <ListView fx:id="recentTransactionsListView" />
+    <Button fx:id="addTransactionButton" text="Add Transaction" />
+</VBox>
