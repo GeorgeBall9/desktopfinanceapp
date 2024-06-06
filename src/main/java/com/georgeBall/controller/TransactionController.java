@@ -5,6 +5,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+import com.georgeBall.App;
 import com.georgeBall.dao.TransactionDao;
 import com.georgeBall.model.Transaction;
 import com.georgeBall.service.TransactionService;
@@ -84,5 +87,11 @@ public class TransactionController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    @FXML
+    private void handleHomeButtonAction() {
+        Stage stage = (Stage) transactionListView.getScene().getWindow();
+        App.loadDashboard(stage);
     }
 }

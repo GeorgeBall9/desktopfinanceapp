@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import com.georgeBall.controller.DashboardController;
 import com.georgeBall.controller.LoginController;
 import com.georgeBall.controller.TransactionController;
 import com.georgeBall.dao.DatabaseManager;
@@ -35,12 +37,13 @@ public class App extends Application {
             System.out.println("Loading dashboard...");
             FXMLLoader loader = new FXMLLoader(App.class.getResource("/fxml/dashboard.fxml"));
             Scene scene = new Scene(loader.load());
+            DashboardController controller = loader.getController();
+            controller.loadRecentTransactions(); // Ensure recent transactions are loaded
             primaryStage.setScene(scene);
             primaryStage.setTitle("Dashboard");
-            System.out.println("Dashboard loaded");
+            System.out.println("Dashboard loaded successfully.");
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Exception occurred: " + e.getMessage());
         }
     }
 

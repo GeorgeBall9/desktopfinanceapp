@@ -7,18 +7,21 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.georgeBall.controller.TransactionController" spacing="10" padding="10">
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.georgeBall.controller.TransactionController" spacing="10">
     <Label text="Transactions" style="-fx-font-size: 24px;" />
     <ListView fx:id="transactionListView" />
-    
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
     <VBox fx:id="addTransactionPane" spacing="10" visible="false">
         <Label text="Add New Transaction" style="-fx-font-size: 18px;" />
         <TextField fx:id="descriptionField" promptText="Description" />
         <TextField fx:id="amountField" promptText="Amount" />
         <TextField fx:id="categoryField" promptText="Category" />
-        <TextField fx:id="dateField" promptText="Date (YYYY-MM-DD)" />
+        <TextField fx:id="dateField" promptText="Date (YYYY-DD-MM)" />
         <Button text="Save Transaction" onAction="#handleSaveTransactionButtonAction" />
     </VBox>
     
     <Button text="Add Transaction" onAction="#handleAddTransactionButtonAction" />
+    <Button text="Home" onAction="#handleHomeButtonAction" />
 </VBox>
